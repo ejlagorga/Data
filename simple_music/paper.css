@@ -1,0 +1,244 @@
+/*   Stylesheet for annotated paper with bibilography
+ *      by Eli LaGorga                 
+ */
+
+/* Front matter - Page title */
+body {
+    margin-left:auto; 
+    margin-right:auto; 
+    max-width:30cm;
+    width:90%;
+}
+
+.UpperLeftHeader {
+    float:left;
+    max-width: 10cm;
+    margin-left:10%;
+    margin-right:0;
+    margin-top:0;
+    margin-bottom:0;
+    padding:0;
+}
+
+.UpperLeftHeader p {
+    margin:0;
+    padding:0;
+    color:grey;
+}
+
+.UpperRightHeader {
+    float:right;
+    max-width: 10cm;
+    margin-left:0;
+    margin-right:10%;
+    margin-top:0;
+    margin-bottom:0;
+    padding:0;
+}
+
+.UpperRightHeader p {
+    margin:0;
+    padding:0;
+    color:grey;
+}
+
+.Title {
+    clear:both;
+    text-align:center;
+    margin-bottom:2em;
+    margin-right:5%;
+    padding-top:1.25em;
+}
+
+.Title h1 {
+    color:blue;
+    font-size:150%;
+}
+
+.Title p {}
+
+.Paper {
+    text-align:justify; 
+    margin-right:10%;
+    margin-left:10%;
+    font-size:large;
+    line-height:1.5;
+}
+
+/* Lists */
+li {
+    margin-top:.3em;
+}
+
+.Bibliography {
+    margin-right:10%;
+    margin-left:10%;
+    padding-top:1.25em;
+    font-size:medium;
+}
+
+.Bibliography h1 {
+    color:blue;
+    font-size:150%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SHIT NOAH DID I MAY SOME DAY LEARN FROM */
+
+.warningdiv {
+    float:right;
+    color:darkgreen;
+    font-size:80%;
+    margin-top:0em;
+    padding-top:0em;
+}
+
+/* Headers */
+/* main topic headings */
+h3 {
+    color:blue;
+}
+
+/* sub topic headings */
+h4 {
+    font-size:90%;
+    font-style:italic;
+}
+
+
+
+/* -------------------------------------------------------------
+ *
+ *            Questions and answers
+ *
+ *               ------------------------------------------------------------- */
+
+div.qa {
+    margin-right:10%;
+    font-size:large;
+}
+/* A q/a pair */
+ol.qa {
+   font-size:large;
+   counter-reset: item ;
+}
+
+/* Common to q and a */
+ol.qa li.q, ol.qa li.a {
+    list-style-type:none;
+    background-color: inherit;
+/*    padding-left: 1.7em ; */
+    text-indent: -1.7em ; 
+}
+
+/* Paragraphs within questions and answers */
+ol.qa li.q p, ol.qa li.a p {
+    margin-left: 1.7em; 
+    color:red;
+}
+
+/* Undo the above for regular lists within a question or answer */
+ol.qa li.q li, ol.qa li.a li {
+    background-color: inherit;
+    padding-left: 0;
+    text-indent: 0 ;
+}
+
+/* nested questions and answers */
+ol.qa li ol.qa {
+        padding-left: 32px;
+    }
+
+    ol.qa li ol.qa li{
+    /* Uncomment to indent subquestions */
+    /*        padding-left: 2.5em ; 
+     *                text-indent: -2.5em ;  */
+/*  Comment following three lines if uncommenting above to indent */
+    padding-left: 2.5em ;
+    text-indent: -2.5em ;
+    /* undo indenting from parent list, not sure why off by .5 but this works*/
+    margin-left:-1.9em;
+
+}
+
+/* -------------------------------------------------------------
+ *
+ *            Questions only
+ *
+ *               ------------------------------------------------------------- */
+
+
+/* q only */
+ol.qa li.q {
+    background: #dddddd;
+        margin-top:2em;
+    }
+
+    ol.qa li.q:before {
+        content: "Q" counters(item, ".") ": "; counter-increment: item;
+    }
+
+    /* nested questions */
+    ol.qa li ol.qa li.q{
+            margin-top:1em;
+            background: #f6f6f6;
+        }
+
+
+        li.nest {
+            list-style-type:none;
+        }
+
+
+        /* -------------------------------------------------------------
+         *
+         *            Answers only
+         *
+         *               ------------------------------------------------------------- */
+
+
+.qa li.a:before {
+    content: "A" counters(item, ".") ": "; 
+    margin-top:1em;
+}
+
+
+
+/* a only */
+.qa li.a {
+    margin-top:0.4em;
+    color: darkgreen; 
+}
+
+/* nested answers */
+ol.qa li ol.qa li.a{
+        margin-right:8em;
+    }
+
+
+    /* -------------------------------------------------------------
+     *
+     *          Preformatted code examples
+     *
+     *             ------------------------------------------------------------- */
+
+pre {
+    margin-left:1cm;
+}
+

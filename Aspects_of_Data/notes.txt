@@ -1,0 +1,4 @@
+RBF using gaussian
+Are we going to do baysian model selection for curve fitting
+We can recast PCA as a minimization problem by using the Rayleigh Quotient our covarience matrix
+
