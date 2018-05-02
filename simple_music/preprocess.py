@@ -1,12 +1,3 @@
-'''
-Author:     John LaGorga 
-Project:    JAZZ 
-Purpose:    Parse, cleanup and process data.
-
-Code adapted from Ji-Sung Kim's deepjazz, https://github.com/evancchow/jazzml with
-express permission.
-'''
-
 from __future__ import print_function
 
 from music21 import *

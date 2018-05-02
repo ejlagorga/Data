@@ -1,13 +1,3 @@
-'''
-Author:     Ji-Sung Kim
-Project:    deepjazz
-Purpose:    Builds an LSTM, a type of recurrent neural network (RNN). 
-
-Code was built while significantly referencing public examples from the
-Keras documentation on GitHub:
-https://github.com/fchollet/keras/blob/master/examples/lstm_text_generation.py
-'''
-
 from __future__ import print_function
 
 from keras.models import Sequential
